@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:netflixclone/core/colors/colors.dart';
 import 'package:netflixclone/presentation/main_page/widgets/screen_mainpage.dart';
 
@@ -12,14 +13,16 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
+          fontFamily: GoogleFonts.montserrat().fontFamily,
           scaffoldBackgroundColor: backgroundcolor,
           colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
               .copyWith(background: backgroundcolor),
           textTheme: const TextTheme(
               bodyLarge: TextStyle(color: Colors.white),
               bodyMedium: TextStyle(color: Colors.white))),
-      home:  ScreenMainPage(),
+      home: ScreenMainPage(),
     );
   }
 }

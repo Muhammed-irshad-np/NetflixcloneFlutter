@@ -11,7 +11,7 @@ import 'package:netflixclone/presentation/search/screen_search.dart';
 
 class ScreenMainPage extends StatelessWidget {
   ScreenMainPage({super.key});
-  final _screnlist = const [
+  final _screnlist = [
     ScreenHome(),
     ScreenNewAndHot(),
     ScreenFastLaugh(),
@@ -28,7 +28,7 @@ class ScreenMainPage extends StatelessWidget {
           return _screnlist[index];
         },
       ),
-      bottomNavigationBar: BottomNavWidget(),
+      bottomNavigationBar: const BottomNavWidget(),
     );
   }
 }
